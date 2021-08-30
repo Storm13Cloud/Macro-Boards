@@ -1,6 +1,5 @@
 
 #include <Keypad_Matrix.h>
-//#include <Keyboard.h>
 #include <HID-Project.h>
 
 #define ENABLE_PULLUPS
@@ -8,12 +7,6 @@
 
 const byte ROWS = 4;
 const byte COLS = 4;
-
-//  {'1', '2', '3', 'Play/Pause'},
-//  {'CTRL', 'Music', 'Previous', 'Next'},
-//  {'n', 'd', '9', 'Explorer'},
-//  {'*', '0', '#', 'Menu'},
-
 
 
 
@@ -47,11 +40,6 @@ rotariesdef rotaries[NUMROTARIES] {
   {6,7,MEDIA_VOLUME_UP,MEDIA_VOLUME_DOWN,0},
 };
 
-
-// 
-//Encoders code from Ben Buxton
-//More info: http://www.buxtronix.net/2011/10/rotary-encoders-done-properly.html
-// 
 
 #define DIR_CCW 0x10
 #define DIR_CW 0x20
