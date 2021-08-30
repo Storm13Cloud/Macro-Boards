@@ -1,4 +1,3 @@
-//#include <Keyboard.h>
 #include <HID-Project.h>
 
 #define ENABLE_PULLUPS
@@ -18,10 +17,6 @@ rotariesdef rotaries[NUMROTARIES] {
 };
 
 
-// 
-//Encoders code from Ben Buxton
-//More info: http://www.buxtronix.net/2011/10/rotary-encoders-done-properly.html
-// 
 
 #define DIR_CCW 0x10
 #define DIR_CW 0x20
@@ -132,19 +127,6 @@ void CheckAllEncoders(void) {
       if (i == 0){
         Consumer.write(result == DIR_CCW ? rotaries[i].ccwchar : rotaries[i].cwchar ); 
       }
-//      else if (i == 2){
-//        if (result == DIR_CCW){
-//          Serial.print("works");
-//          Keyboard.write(rotaries[i].ccwchar);
-//        }
-//        else {
-//          Keyboard.write(rotaries[i].cwchar);
-//         }
-//      }
-//      else Keyboard.write(result == DIR_CCW ? rotaries[i].ccwchar : rotaries[i].cwchar );
-//      
-//      //
-//
     }
   }
 }
